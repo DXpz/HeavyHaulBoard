@@ -1,0 +1,158 @@
+/* src/components/Board.css */
+.board-container {
+    padding: 2rem;
+    width: calc(100% - 250px);
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    position: relative;
+    min-height: calc(100vh - 80px);
+}
+
+.board-container h2 {
+    text-align: left;
+    margin: 0 0 1.5rem 0;
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #2c3e50;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #3498db;
+}
+
+.table-wrapper {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    overflow-x: auto;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 1000px;
+}
+
+thead {
+    background-color: #2c3e50;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+th {
+    padding: 1.2rem;
+    text-align: left;
+    font-weight: 500;
+    color: white;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+td {
+    padding: 1.2rem;
+    color: #2c3e50;
+    border-bottom: 1px solid #e2e8f0;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.data-row:hover {
+    background-color: #f8fafc;
+    transform: translateY(-2px);
+    transition: all 0.2s ease;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.contact-info a {
+    color: #3498db;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.contact-info a:hover {
+    color: #1a73e8;
+    text-decoration: underline;
+}
+
+.truck-badge {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    background-color: #e8f4ff;
+    color: #2c3e50;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid #3498db;
+    transition: all 0.2s ease;
+}
+
+.truck-badge:hover {
+    background-color: #d1e7ff;
+}
+
+/*
+Hoy estás muy linda, no quiero molestar
+Se me va la pinza, ni te puedo mirar
+Hay algo raro, llevo semanas cansado
+Hoy estás muy linda, no quiero molestar
+Se me va la pinza, ni te puedo mirar
+Hay algo raro, llevo semanas cansado
+*/
+
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .board-container {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    th,
+    td {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .board-container h2 {
+        font-size: 1.5rem;
+    }
+
+    th,
+    td {
+        padding: 0.8rem;
+        font-size: 0.85rem;
+    }
+
+    .truck-badge {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .board-container {
+        padding: 0.5rem;
+    }
+
+    .board-container h2 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+
+    th,
+    td {
+        padding: 0.6rem;
+    }
+
+    .contact-info a {
+        font-size: 0.8rem;
+    }
+}
